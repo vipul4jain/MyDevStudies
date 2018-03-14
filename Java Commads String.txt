@@ -1,0 +1,82 @@
+//to compare the strings
+public class StringCompareEmp{
+   public static void main(String args[]){
+      String str = "Hello World";
+      String anotherString = "hello world";
+      Object objStr = str;
+
+      System.out.println( str.compareTo(anotherString) );        //-32
+      System.out.println( str.compareToIgnoreCase(anotherString) );    //0
+      System.out.println( str.compareTo(objStr.toString()));         //0
+   }
+}
+
+//System.out.println(s1.equals(s2));
+//System.out.println(s2.equals(s3));
+//System.out.println(s1 == s2);
+//System.out.println(s2 == s3);
+
+////////////////////////////////////////////////////////////////////////////////////
+public class SearchlastString {
+   public static void main(String[] args) {
+      String strOrig = "Hello world ,Hello Reader";
+      int lastIndex = strOrig.lastIndexOf("Hello");
+      
+      if(lastIndex == - 1){
+         System.out.println("Hello not found");
+      } else {
+         System.out.println("Last occurrence of Hello is at index "+ lastIndex);   //Last occurrence of Hello is at index 13
+      }
+   }
+}
+////////////////////////////////////////////////////////////////////////////////////
+public class Main {
+   public static void main(String args[]) {
+      String str = "this is Java";
+      System.out.println(removeCharAt(str, 3));
+   }
+   public static String removeCharAt(String s, int pos) {
+      return s.substring(0, pos) + s.substring(pos + 1);    //thi is Java
+   }
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+public class StringReplaceEmp{
+   public static void main(String args[]){
+      String str = "Hello World";
+      System.out.println( str.replace( 'H','W' ) );           //Wello World
+      System.out.println( str.replaceFirst("He", "Wa") );          //Wallo World
+      System.out.println( str.replaceAll("He", "Ha") );        //Hallo World
+   }
+}
+////////////////////////////////////////////////////////////////////////////////////
+public class StringReverseExample{
+   public static void main(String[] args) {
+      String string = "abcdef";
+      String reverse = new StringBuffer(string).reverse().toString();
+      System.out.println("\nString before reverse: "+string);           //String before reverse:abcdef
+      System.out.println("String after reverse: "+reverse);             //String after reverse:fedcba
+   }
+}
+
+
+import java.io.*;
+import java.util.*;
+
+public class HelloWorld {
+   public static void main(String[] args) {
+      String input = "tutorialspoint";
+      char[] try1 = input.toCharArray();
+      for (int i = try1.length-1;i>=0;i--) System.out.print(try1[i]);
+   }
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+      String strOrig = "Hello readers";
+      int intIndex = strOrig.indexOf("Hello");
+
+//////////////////////////////////////////////////////////////////////////////////
+      String text = "The cat is on the table";
+      System.out.print(text.contains("the")); //true
+
+
