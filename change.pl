@@ -13,3 +13,4 @@ while (my $row = <$IN>) {
   print $row;
 }
 }
+close $IN;
