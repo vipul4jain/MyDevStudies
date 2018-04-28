@@ -1,0 +1,11 @@
+ReportBatch -Ukplus -P${KPLUSPWD}
+
+ReportBatch -U$kplus -P${KPLUSPWD}
+
+  ReportBatch -U$kplus -P${KPLUSPWD}
+
+#ReportBatch -Ukplus -P${KPLUSPWD}
+
+#ReportBatch -U$kplus -P${KPLUSPWD}
+
+  echo "#ReportBatch -U$kplus -P${KPLUSPWD REPORT"

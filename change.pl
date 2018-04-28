@@ -1,8 +1,7 @@
 #!/usr/bin/perl -w
 
 my $input_file = 'Repo.txt';
-my $search_string = 'ReportBatch';
-my $add_begin = 'qwe';
+my $search_string = '(\s*)ReportBatch(\s+)( NO_COMPUTE_CHANGE)?-U(\s+|\S+)[    ]REPORT';
 my $add_end = '< KPADMINFILE';
 # Read file 
 open(my $IN, '<', $input_file) or die "cannot open file $input_file";
