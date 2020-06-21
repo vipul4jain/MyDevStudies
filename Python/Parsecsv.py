@@ -1,5 +1,11 @@
-import os
-fname='TestFile.csv'
+fname = input('Enter the file name: ')
+try:
+    fhand = open(fname)
+except:
+    print 'File cannot be opened:', fname
+    exit()
+
+#fname='TestFile.csv'
 fhand = open(fname)
 
 for line in fhand:
