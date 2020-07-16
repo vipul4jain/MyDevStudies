@@ -7,9 +7,9 @@ page = (
            E.HEADER
            ( 
                {'Primary': 'ForwardDeals'},
-               
+
                E.TableName('ForwardDeals', type("S")),
-			   E.Action(Act, type("C")),
+               E.Action(Act, type("C")),
                E.DateFormat('DD/MM/YYYY hh:mm:ss', type("S")),
                E.TradeKast('Y', type("S")),
                E.ExecCustomProc('Y', type("S")),
