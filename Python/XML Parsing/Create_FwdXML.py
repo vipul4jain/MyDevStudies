@@ -5,7 +5,9 @@ Act="INSERT"
 page = (
     E.KPLUSFEED(
            E.HEADER
-           ( {'Primary': 'ForwardDeals'},
+           ( 
+               {'Primary': 'ForwardDeals'},
+               
                E.TableName('ForwardDeals', type("S")),
 			   E.Action(Act, type("C")),
                E.DateFormat('DD/MM/YYYY hh:mm:ss', type("S")),
