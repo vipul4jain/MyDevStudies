@@ -62,7 +62,7 @@ class ConverttoXML():
             Header.append(elem.replace(' ',''))
 
         logging.info(f'Headers: {Header}')
-        logging.info(f'DATA : {data[2:len(data)]}')
+        logging.error(f'DATA : {data[2:len(data)]}')
 
         xmldata=(E.root(E.Bonds))
 
@@ -94,11 +94,12 @@ if __name__ == "__main__":
     outfile   = sys.argv[2]
 
     now = datetime.now()
-    datestr = now.strftime("%Y%M%d")
+    datestr = now.strftime("%Y%m%d")
 
-    logging.basicConfig(filename=datestr+'.log', filemode='w', format='%(asctime)s - %(message)s', level=logging.INFO)
-    logging.info('This will get logged to a file')
-    logging.info(f'first Args :{sys.argv[1]}')
+    logging.basicConfig(filename=datestr+'.log', filemode='a', format='%(asctime)s - %(levelname)s - %(message)s' , level=logging.INFO)
+    logging.info('*******************Execution Started*******************')
+    logging.warning(f'first Args :{sys.argv[1]}')
 
     sqltoxml = ConverttoXML( inputfile, outfile)
     sqltoxml.Convert()
+    logging.info('*******************Execution Successful*************')
