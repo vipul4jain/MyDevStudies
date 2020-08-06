@@ -1,0 +1,7 @@
+;Bonds_ShortName;Bonds_Name              ; Cpty_Issuer  ; Currency  ; IssueDate ; SettlementDate ; MaturityDate ; NPI;IssuerStatus;
+;--------------;-----------------;----------------------;-----;----------------;---------------;-------------;-------------;----;
+;AJBOND2        ;AJBOND2   ; ITC    ; USD   ; Jun 22 2016 12:00 AM;   Jun 22 2016 12:00 AM;    Jun 22 2021 12:00AM;N;NULL;
+;ITC10%2016     ;ITC10%2016; ITC    ; INR   ; Jul 22 2016 12:00 AM;   Jul 22 2016 12:00 AM;    Jul 22 2021 12:00AM;N;DEFAULTER;
+--
+--
+--

@@ -1,0 +1,23 @@
+<root>
+  <Bonds/>
+  <BondsData>
+    <Bonds_ShortName>AJBOND2</Bonds_ShortName>
+    <Bonds_Name>AJBOND2</Bonds_Name>
+    <Cpty_Issuer>ITC</Cpty_Issuer>
+    <Currency>USD</Currency>
+    <IssueDate>Jun 22 2016 12:00 AM</IssueDate>
+    <SettlementDate>Jun 22 2016 12:00 AM</SettlementDate>
+    <MaturityDate>Jun 22 2021 12:00AM</MaturityDate>
+    <NPI>N</NPI>
+  </BondsData>
+  <BondsData>
+    <Bonds_ShortName>ITC10%2016</Bonds_ShortName>
+    <Bonds_Name>ITC10%2016</Bonds_Name>
+    <Cpty_Issuer>ITC</Cpty_Issuer>
+    <Currency>INR</Currency>
+    <IssueDate>Jul 22 2016 12:00 AM</IssueDate>
+    <SettlementDate>Jul 22 2016 12:00 AM</SettlementDate>
+    <MaturityDate>Jul 22 2021 12:00AM</MaturityDate>
+    <NPI>N</NPI>
+  </BondsData>
+</root>
