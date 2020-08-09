@@ -44,34 +44,35 @@ Description:-
     Output is XML, each header will be the tag 
 '''
 
+
 class ConverttoXML():
 
     def __init__(self, inputfile, outfile):
         self._inputfile = inputfile
         self._outfile = outfile
-    
+
     def Convert(self):
         fhand = open(self._inputfile, 'r')
         data = fhand.read().split('\n')
 
         Head = data[0].split(';')
         Head = Head[1:len(Head) - 1]
-        Header=[]
+        Header = []
 
         for elem in Head:
-            Header.append(elem.replace(' ',''))
+            Header.append(elem.replace(' ', ''))
 
         logging.info(f'Headers: {Header}')
         logging.error(f'DATA : {data[2:len(data)]}')
 
-        xmldata=(E.root(E.Bonds))
+        xmldata = (E.root(E.Bonds))
 
         for line in data[2:len(data)-3]:
             col = line.split(';')
             col = col[1:len(Head)]
 
             print(col)
-            page=(E.BondsData())
+            page = (E.BondsData())
 
             for i in range(len(Header) - 1):
                 head = Header[i]
@@ -79,7 +80,7 @@ class ConverttoXML():
                 page.append(E.head(val))
                 body = page.find('head')
                 body.tag = head
-            
+
             xmldata.append(page)
         fhand.close()
 
@@ -89,17 +90,23 @@ class ConverttoXML():
         for line in xmlstring:
             fhand.write(line)
 
+
 if __name__ == "__main__":
-    inputfile = sys.argv[1]
-    outfile   = sys.argv[2]
+    try:
+        now = datetime.now()
+        datestr = now.strftime("%Y%m%d")
 
-    now = datetime.now()
-    datestr = now.strftime("%Y%m%d")
+        logging.basicConfig(filename=datestr+'.log', filemode='a',
+                            format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
+        logging.info('*******************Execution Started*******************')
+        logging.warning(f'first Args :{sys.argv[1]}')
 
-    logging.basicConfig(filename=datestr+'.log', filemode='a', format='%(asctime)s - %(levelname)s - %(message)s' , level=logging.INFO)
-    logging.info('*******************Execution Started*******************')
-    logging.warning(f'first Args :{sys.argv[1]}')
+# Taking the arguments
+        inputfile = sys.argv[1]
+        outfile = sys.argv[2]
+    except Exception as e:
+        logging.error("Exception Occured", exc_info=True)
 
-    sqltoxml = ConverttoXML( inputfile, outfile)
+    sqltoxml = ConverttoXML(inputfile, outfile)
     sqltoxml.Convert()
     logging.info('*******************Execution Successful*************')
